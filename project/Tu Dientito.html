@@ -1,0 +1,1726 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Tu Dientito · Clínica Dental Pediátrica · San Lucas Sacatepéquez</title>
+<meta name="description" content="Clínica Dental Tu Dientito — odontopediatría con cariño en San Lucas Sacatepéquez. Cuidamos tus dientes como a tus niños." />
+<meta name="theme-color" content="#B3E5FC" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --celeste-50:   #F1FAFE;
+    --celeste-100:  #E1F4FC;
+    --celeste-200:  #B3E5FC;
+    --celeste-300:  #81D4FA;
+    --celeste-400:  #4FC3F7;
+    --celeste-500:  #29B6F6;
+    --ink-900:      #0A3D5C;
+    --ink-700:      #1F4C68;
+    --ink-500:      #547189;
+    --ink-300:      #8FA4B5;
+    --cream:        #FBFDFE;
+    --paper:        #F4FAFD;
+    --line:         #E6F1F7;
+    --whatsapp:     #25D366;
+    --whatsapp-dk:  #128C4F;
+    --shadow-sm: 0 1px 2px rgba(10,61,92,.05), 0 2px 8px rgba(10,61,92,.04);
+    --shadow-md: 0 4px 16px rgba(10,61,92,.07), 0 12px 32px rgba(10,61,92,.06);
+    --shadow-lg: 0 12px 32px rgba(10,61,92,.10), 0 32px 64px rgba(10,61,92,.08);
+    --radius-sm: 14px;
+    --radius:    22px;
+    --radius-lg: 32px;
+    --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+    --font-body:    "Nunito", system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink-900);
+    background: var(--cream);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--celeste-200); color: var(--ink-900); }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0;
+    color: var(--ink-900);
+    text-wrap: balance;
+  }
+
+  p { margin: 0; text-wrap: pretty; }
+
+  a { color: inherit; text-decoration: none; }
+
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+  .container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 48px);
+  }
+
+  /* =================== NAV =================== */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    padding: 14px 0;
+    transition: background .35s ease, box-shadow .35s ease, padding .25s ease;
+  }
+  .nav.scrolled {
+    background: rgba(251,253,254,.85);
+    backdrop-filter: saturate(1.2) blur(14px);
+    -webkit-backdrop-filter: saturate(1.2) blur(14px);
+    box-shadow: 0 1px 0 rgba(10,61,92,.06);
+    padding: 10px 0;
+  }
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+  }
+  .brand-mark {
+    width: 38px; height: 38px;
+    display: grid; place-items: center;
+    background: var(--celeste-200);
+    border-radius: 50%;
+    color: var(--ink-900);
+  }
+  .brand-name b { font-weight: 800; }
+  .brand-name span { display: block; font-size: 11px; font-weight: 600; color: var(--ink-500); letter-spacing: 0.06em; text-transform: uppercase; margin-top: -2px; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .nav-links a {
+    padding: 9px 14px;
+    font-weight: 600;
+    color: var(--ink-700);
+    border-radius: 999px;
+    transition: background .2s, color .2s;
+    font-size: 15px;
+  }
+  .nav-links a:hover { background: var(--celeste-100); color: var(--ink-900); }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--ink-900);
+    color: var(--cream);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform .2s, background .2s;
+  }
+  .nav-cta:hover { transform: translateY(-1px); background: #073149; }
+
+  .menu-btn {
+    display: none;
+    width: 42px; height: 42px;
+    border-radius: 12px;
+    background: var(--celeste-100);
+    place-items: center;
+  }
+  .menu-btn svg { width: 22px; height: 22px; stroke: var(--ink-900); }
+
+  /* =================== HERO =================== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 120px 0 80px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .hero-bg video, .hero-bg .hero-still {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transform: scale(1.08);
+    animation: heroPan 14s ease-in-out infinite alternate;
+  }
+  .hero-still { background-size: cover; background-position: center; }
+  @keyframes heroPan {
+    0%   { transform: scale(1.08) translate(0, 0); }
+    100% { transform: scale(1.18) translate(-2%, -1%); }
+  }
+  .hero-bg::after {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(120% 70% at 0% 60%, rgba(251,253,254,.85) 0%, rgba(251,253,254,.55) 35%, rgba(251,253,254,0) 70%),
+      linear-gradient(180deg, rgba(251,253,254,.5) 0%, rgba(251,253,254,0) 30%, rgba(251,253,254,.35) 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px 8px 8px;
+    background: rgba(251,253,254,.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(10,61,92,.08);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-700);
+    letter-spacing: 0.02em;
+    margin-bottom: 28px;
+  }
+  .eyebrow .dot {
+    width: 22px; height: 22px;
+    background: var(--celeste-200);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--ink-900);
+    font-size: 13px;
+  }
+  .hero h1 {
+    font-size: clamp(42px, 6.4vw, 86px);
+    margin-bottom: 22px;
+  }
+  .hero h1 .accent {
+    background: linear-gradient(180deg, var(--celeste-400) 0%, var(--celeste-500) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-style: italic;
+    font-weight: 700;
+  }
+  .hero .lede {
+    font-size: clamp(17px, 1.6vw, 19px);
+    color: var(--ink-700);
+    max-width: 540px;
+    margin-bottom: 36px;
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 26px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform .25s cubic-bezier(.2,.8,.3,1.2), box-shadow .25s, background .2s;
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .btn:active { transform: translateY(0); }
+  .btn-whatsapp {
+    background: var(--whatsapp);
+    color: white;
+  }
+  .btn-whatsapp:hover { background: #1FB95A; }
+  .btn-primary {
+    background: var(--ink-900);
+    color: var(--cream);
+  }
+  .btn-primary:hover { background: #062E45; }
+  .btn-celeste {
+    background: var(--celeste-200);
+    color: var(--ink-900);
+  }
+  .btn-celeste:hover { background: var(--celeste-300); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink-900);
+    border: 1.5px solid rgba(10,61,92,.15);
+    box-shadow: none;
+  }
+  .btn-ghost:hover { background: var(--celeste-100); border-color: rgba(10,61,92,.25); }
+
+  .hero-meta {
+    margin-top: 56px;
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+  }
+  .hero-meta .mt {
+    display: flex; flex-direction: column;
+  }
+  .hero-meta .mt b {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--ink-900);
+    line-height: 1;
+  }
+  .hero-meta .mt span {
+    font-size: 13px;
+    color: var(--ink-500);
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .hero-meta .sep {
+    width: 1px;
+    background: rgba(10,61,92,.12);
+  }
+
+  .hero-card {
+    position: absolute;
+    z-index: 3;
+    right: clamp(20px, 4vw, 48px);
+    bottom: clamp(20px, 4vw, 60px);
+    background: rgba(251,253,254,.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 18px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(10,61,92,.06);
+    max-width: 280px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    animation: floatY 5s ease-in-out infinite alternate;
+  }
+  @keyframes floatY {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+  }
+  .hero-card .av {
+    width: 46px; height: 46px;
+    background: var(--celeste-200);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .hero-card b { font-weight: 800; display: block; font-size: 14px; }
+  .hero-card span { font-size: 12px; color: var(--ink-500); display: block; line-height: 1.4; }
+
+  /* =================== SECTION =================== */
+  section { padding: clamp(80px, 10vw, 140px) 0; position: relative; }
+  .sec-head {
+    display: flex; flex-direction: column;
+    gap: 18px;
+    margin-bottom: 60px;
+    max-width: 720px;
+  }
+  .sec-tag {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--celeste-500);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .sec-tag::before {
+    content: ""; width: 32px; height: 2px;
+    background: var(--celeste-300); border-radius: 2px;
+  }
+  .sec-head h2 {
+    font-size: clamp(36px, 5vw, 60px);
+  }
+  .sec-head .sec-sub {
+    color: var(--ink-500);
+    font-size: 18px;
+    max-width: 620px;
+  }
+
+  /* =================== SERVICES =================== */
+  #servicios {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+  .svc-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 30px 26px 32px;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .35s cubic-bezier(.2,.8,.3,1), box-shadow .35s, border-color .35s;
+    min-height: 320px;
+  }
+  .svc-card::before {
+    content: "";
+    position: absolute;
+    inset: -40% -40% auto auto;
+    width: 180px; height: 180px;
+    background: var(--svc-bg, var(--celeste-100));
+    border-radius: 50%;
+    opacity: .6;
+    transition: transform .5s cubic-bezier(.2,.8,.3,1);
+    z-index: 0;
+  }
+  .svc-card > * { position: relative; z-index: 1; }
+  .svc-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--svc-bg, var(--celeste-200));
+  }
+  .svc-card:hover::before { transform: scale(1.25) rotate(15deg); }
+
+  .svc-icon {
+    width: 60px; height: 60px;
+    border-radius: 18px;
+    background: var(--svc-bg, var(--celeste-100));
+    display: grid; place-items: center;
+    color: var(--ink-900);
+  }
+  .svc-icon svg { width: 30px; height: 30px; }
+  .svc-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .svc-card p {
+    color: var(--ink-500);
+    font-size: 15px;
+    flex-grow: 1;
+  }
+  .svc-card .svc-tag {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink-700);
+    background: var(--svc-bg, var(--celeste-100));
+    padding: 5px 12px;
+    border-radius: 999px;
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  /* =================== WHY US =================== */
+  #nosotros {
+    background: var(--cream);
+  }
+  .why-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+  }
+  .why-img-stack {
+    position: relative;
+    aspect-ratio: 4/5;
+  }
+  .why-img-stack .wi {
+    position: absolute;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+  .why-img-stack .wi-1 {
+    width: 70%; aspect-ratio: 3/4;
+    top: 0; left: 0;
+    z-index: 2;
+  }
+  .why-img-stack .wi-2 {
+    width: 60%; aspect-ratio: 4/3;
+    bottom: 0; right: 0;
+    z-index: 3;
+    border: 6px solid var(--cream);
+  }
+  .why-img-stack .wi img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .why-img-stack .wi-badge {
+    position: absolute;
+    z-index: 4;
+    top: 30%; right: 10%;
+    background: var(--ink-900);
+    color: var(--cream);
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    transform: rotate(-6deg);
+  }
+  .why-img-stack .wi-badge b {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1;
+  }
+  .why-img-stack .wi-badge span {
+    font-size: 11px;
+    color: var(--celeste-200);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .why-list {
+    display: flex; flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .why-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 22px;
+    padding: 22px 4px;
+    border-bottom: 1px solid var(--line);
+    transition: padding .25s;
+  }
+  .why-item:last-child { border-bottom: 0; }
+  .why-item:hover { padding-left: 12px; }
+  .why-num {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--celeste-100);
+    color: var(--ink-900);
+    display: grid; place-items: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 22px;
+    transition: background .3s, color .3s;
+  }
+  .why-item:hover .why-num { background: var(--celeste-300); }
+  .why-item h4 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .why-item p {
+    color: var(--ink-500);
+    font-size: 15.5px;
+  }
+
+  /* =================== CONTACT =================== */
+  #contacto {
+    background: linear-gradient(180deg, var(--paper) 0%, var(--celeste-50) 100%);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: stretch;
+  }
+  .contact-info-card {
+    background: var(--ink-900);
+    color: var(--cream);
+    border-radius: var(--radius-lg);
+    padding: clamp(36px, 4.5vw, 52px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .contact-info-card::before {
+    content: "";
+    position: absolute;
+    bottom: -120px; right: -120px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(179,229,252,.25) 0%, rgba(179,229,252,0) 70%);
+  }
+  .contact-info-card h3 {
+    color: var(--cream);
+    font-size: 32px;
+  }
+  .contact-info-card p.intro {
+    color: rgba(251,253,254,.75);
+    max-width: 380px;
+  }
+  .contact-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; position: relative; }
+  .contact-list li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+  .contact-list .ci-icon {
+    width: 44px; height: 44px;
+    border-radius: 14px;
+    background: rgba(179,229,252,.15);
+    color: var(--celeste-200);
+    display: grid; place-items: center;
+  }
+  .contact-list svg { width: 20px; height: 20px; }
+  .contact-list b { font-size: 16px; font-weight: 700; color: var(--cream); display: block; }
+  .contact-list span { font-size: 13px; color: rgba(251,253,254,.65); }
+  .map-frame {
+    margin-top: auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background: var(--celeste-200) center/cover no-repeat;
+    background-image:
+      linear-gradient(135deg, rgba(10,61,92,.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 50%, rgba(255,255,255,.4) 0%, transparent 30%),
+      linear-gradient(180deg, #B3E5FC 0%, #81D4FA 100%);
+    position: relative;
+    border: 1px solid rgba(179,229,252,.2);
+  }
+  .map-frame .map-pin {
+    position: absolute;
+    top: 45%; left: 50%;
+    transform: translate(-50%, -100%);
+    width: 36px; height: 36px;
+    background: var(--ink-900);
+    border-radius: 50% 50% 50% 0;
+    rotate: -45deg;
+    display: grid; place-items: center;
+    box-shadow: 0 8px 24px rgba(10,61,92,.4);
+    animation: pinBounce 2s ease-in-out infinite;
+  }
+  .map-frame .map-pin::after {
+    content: "";
+    width: 10px; height: 10px; background: var(--celeste-200);
+    border-radius: 50%;
+  }
+  @keyframes pinBounce {
+    0%, 100% { transform: translate(-50%, -100%); }
+    50% { transform: translate(-50%, -115%); }
+  }
+  .map-frame .map-label {
+    position: absolute;
+    bottom: 12px; left: 12px; right: 12px;
+    background: rgba(251,253,254,.95);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-900);
+    text-align: center;
+    backdrop-filter: blur(8px);
+  }
+
+  .contact-form-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: clamp(32px, 4vw, 48px);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .contact-form-card h3 { font-size: 28px; }
+  .contact-form-card p.sub { color: var(--ink-500); margin-bottom: 8px; }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink-700);
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--ink-900);
+    background: var(--paper);
+    border: 1.5px solid transparent;
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition: border-color .2s, background .2s;
+    resize: none;
+  }
+  .field textarea { min-height: 100px; }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none;
+    background: white;
+    border-color: var(--celeste-300);
+  }
+  .field.error input, .field.error select, .field.error textarea {
+    border-color: #E5736E;
+    background: #FCEEED;
+  }
+  .err-msg {
+    font-size: 12px;
+    color: #C44A45;
+    font-weight: 600;
+  }
+  .form-success {
+    background: linear-gradient(135deg, #DCF7E3 0%, #C9F0D6 100%);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+  }
+  .form-success .check {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: var(--whatsapp);
+    color: white;
+    display: grid; place-items: center;
+    animation: pop .4s cubic-bezier(.2,.8,.3,1.4);
+  }
+  @keyframes pop {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  .form-success h4 { font-size: 22px; }
+  .form-success p { color: var(--ink-500); font-size: 15px; }
+
+  /* =================== FOOTER =================== */
+  footer {
+    background: var(--ink-900);
+    color: var(--cream);
+    padding: 72px 0 24px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(179,229,252,.12);
+  }
+  .foot-brand { display: flex; flex-direction: column; gap: 18px; max-width: 320px; }
+  .foot-brand .brand { color: var(--cream); font-size: 22px; }
+  .foot-brand .brand-mark { background: var(--celeste-200); }
+  .foot-brand .brand-name span { color: var(--celeste-200); }
+  .foot-brand p { color: rgba(251,253,254,.7); font-size: 14.5px; }
+  .foot-col h5 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--celeste-200);
+    margin-bottom: 16px;
+  }
+  .foot-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .foot-col a {
+    color: rgba(251,253,254,.75);
+    font-size: 14.5px;
+    transition: color .2s;
+  }
+  .foot-col a:hover { color: var(--cream); }
+
+  .foot-social { display: flex; gap: 10px; margin-top: 8px; }
+  .foot-social a {
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    background: rgba(179,229,252,.1);
+    display: grid; place-items: center;
+    color: var(--celeste-200);
+    transition: background .2s, transform .2s;
+  }
+  .foot-social a:hover { background: var(--celeste-200); color: var(--ink-900); transform: translateY(-2px); }
+  .foot-social svg { width: 18px; height: 18px; }
+
+  .foot-bot {
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: rgba(251,253,254,.55);
+  }
+
+  /* =================== FAB =================== */
+  .fab-whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px; height: 60px;
+    background: var(--whatsapp);
+    color: white;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    z-index: 40;
+    box-shadow: 0 8px 24px rgba(37,211,102,.4), 0 0 0 8px rgba(37,211,102,.12);
+    transition: transform .2s, box-shadow .3s;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  .fab-whatsapp:hover { transform: scale(1.06); }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 8px 24px rgba(37,211,102,.4), 0 0 0 0px rgba(37,211,102,.3); }
+    50% { box-shadow: 0 8px 24px rgba(37,211,102,.4), 0 0 0 16px rgba(37,211,102,0); }
+  }
+  .fab-whatsapp svg { width: 28px; height: 28px; }
+
+  /* =================== MODAL =================== */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(10,61,92,.55);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    display: grid; place-items: center;
+    padding: 20px;
+    animation: fadeIn .25s ease;
+  }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal {
+    background: white;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: clamp(28px, 4vw, 40px);
+    position: relative;
+    animation: modalIn .35s cubic-bezier(.2,.8,.3,1.2);
+    box-shadow: var(--shadow-lg);
+  }
+  @keyframes modalIn {
+    from { transform: translateY(20px) scale(.96); opacity: 0; }
+    to   { transform: translateY(0) scale(1); opacity: 1; }
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--paper);
+    display: grid; place-items: center;
+    color: var(--ink-700);
+    transition: background .2s;
+  }
+  .modal-close:hover { background: var(--celeste-100); }
+  .modal h3 { font-size: 26px; margin-bottom: 6px; }
+  .modal .sub { color: var(--ink-500); font-size: 15px; margin-bottom: 22px; }
+  .date-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .date-pill {
+    padding: 12px 8px;
+    border-radius: 14px;
+    background: var(--paper);
+    border: 1.5px solid transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .date-pill b {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .date-pill span {
+    display: block;
+    font-size: 11px;
+    color: var(--ink-500);
+    margin-top: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .date-pill:hover { background: var(--celeste-100); }
+  .date-pill.active {
+    background: var(--celeste-200);
+    border-color: var(--celeste-400);
+  }
+  .time-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+  .time-pill {
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--paper);
+    border: 1.5px solid transparent;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s;
+    text-align: center;
+  }
+  .time-pill:hover { background: var(--celeste-100); }
+  .time-pill.active {
+    background: var(--ink-900);
+    color: var(--cream);
+  }
+  .time-pill.disabled {
+    opacity: .4;
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+
+  /* =================== MOBILE NAV =================== */
+  .mob-menu {
+    position: fixed;
+    inset: 0;
+    background: var(--cream);
+    z-index: 60;
+    padding: 80px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform: translateY(-100%);
+    transition: transform .35s cubic-bezier(.2,.8,.3,1);
+  }
+  .mob-menu.open { transform: translateY(0); }
+  .mob-menu a {
+    padding: 18px 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .mob-menu .mob-cta {
+    margin-top: 24px;
+    text-align: center;
+    justify-content: center;
+  }
+  .mob-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--paper);
+    display: grid; place-items: center;
+  }
+  .mob-close svg { width: 22px; height: 22px; }
+
+  /* =================== RESPONSIVE =================== */
+  @media (max-width: 960px) {
+    .nav-links, .nav-cta { display: none; }
+    .menu-btn { display: grid; }
+    .hero-card { display: none; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-wrap { grid-template-columns: 1fr; }
+    .why-img-stack { max-width: 440px; margin: 0 auto; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .foot-brand { grid-column: 1 / -1; }
+  }
+  @media (max-width: 560px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .date-grid { grid-template-columns: repeat(3, 1fr); }
+    .time-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero { padding: 110px 0 60px; }
+    .hero-meta { gap: 24px; margin-top: 40px; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .btn { padding: 16px 22px; font-size: 15px; }
+  }
+
+  /* =================== REVEAL =================== */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal-stagger > * { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.3,1); }
+  .reveal-stagger.in > *:nth-child(1) { transition-delay: 0ms; }
+  .reveal-stagger.in > *:nth-child(2) { transition-delay: 90ms; }
+  .reveal-stagger.in > *:nth-child(3) { transition-delay: 180ms; }
+  .reveal-stagger.in > *:nth-child(4) { transition-delay: 270ms; }
+  .reveal-stagger.in > * { }
+  .reveal-stagger.in > * { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- ICON DEFS (reusable inline svg) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-tooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 3.5c-2.2 0-3.5 1.6-3.5 4 0 1.7.6 3.3 1.1 5.2.5 1.8.6 3 1 5.1.3 1.9.6 3.7 1.8 3.7 1 0 1.2-1.2 1.7-3 .5-1.7.9-2.7 1.9-2.7s1.4 1 1.9 2.7c.5 1.8.7 3 1.7 3 1.2 0 1.5-1.8 1.8-3.7.4-2.1.5-3.3 1-5.1.5-1.9 1.1-3.5 1.1-5.2 0-2.4-1.3-4-3.5-4-1.5 0-2.3.7-3 1.5-.7-.8-1.5-1.5-3-1.5z"/>
+    </symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M8 14c.8 1.5 2.2 2.5 4 2.5s3.2-1 4-2.5"/>
+      <circle cx="9" cy="10" r=".6" fill="currentColor"/>
+      <circle cx="15" cy="10" r=".6" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>
+      <circle cx="12" cy="12" r="3"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l8 3v5c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-3z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.6 1.1 2.8.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5-1.3c1.4.8 3.2 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3c-.9-1.4-1.3-3-1.3-4.5C3.5 7.3 7.3 3.5 12 3.5s8.5 3.8 8.5 8.5-3.8 8.3-8.5 8.3z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-7.5 8-13a8 8 0 0 0-16 0c0 5.5 8 13 8 13z"/>
+      <circle cx="12" cy="9" r="3"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 4h4l2 5-3 2c1 2 3 4 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="M3 7l9 6 9-6"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12l5 5L20 6"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 6l12 12M18 6L6 18"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M13 5l7 7-7 7"/>
+    </symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.4-2 2-2h1.5v-3.4C16 2 14.8 2 13.5 2 10.7 2 9 3.7 9 6.7V10H6v4h3v8h4z"/>
+    </symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 8.6c-1.7 0-3.2-.7-4.3-1.8V15a6 6 0 1 1-6-6c.4 0 .7 0 1 .1v3.2a3 3 0 1 0 2 2.8V2h3a4.3 4.3 0 0 0 4.3 4.3v2.3z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef, useCallback } = React;
+
+const WHATSAPP_NUMBER = "50254764558";
+const WA_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola Tu Dientito, quisiera información para agendar una cita 🦷")}`;
+
+const Icon = ({ id, ...p }) => <svg {...p}><use href={`#i-${id}`} /></svg>;
+
+// ============ REVEAL HOOK ============
+function useReveal() {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!ref.current) return;
+    const els = ref.current.classList.contains("reveal") || ref.current.classList.contains("reveal-stagger")
+      ? [ref.current]
+      : ref.current.querySelectorAll(".reveal, .reveal-stagger");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+  return ref;
+}
+
+// ============ NAV ============
+function Nav({ onBook, onOpenMenu }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 18);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
+      <div className="container nav-row">
+        <a href="#" className="brand" aria-label="Tu Dientito - inicio">
+          <span className="brand-mark"><Icon id="tooth" width="22" height="22" /></span>
+          <span className="brand-name">
+            <b>Tu Dientito</b>
+            <span>Clínica Dental</span>
+          </span>
+        </a>
+        <ul className="nav-links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#agendar" className="nav-cta" onClick={(e) => { e.preventDefault(); onBook(); }}>
+          Agendar cita <Icon id="arrow" width="14" height="14" />
+        </a>
+        <button className="menu-btn" onClick={onOpenMenu} aria-label="Abrir menú">
+          <Icon id="menu" />
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+function MobileMenu({ open, onClose, onBook }) {
+  return (
+    <div className={`mob-menu ${open ? "open" : ""}`}>
+      <button className="mob-close" onClick={onClose} aria-label="Cerrar menú">
+        <Icon id="x" />
+      </button>
+      <a href="#servicios" onClick={onClose}>Servicios</a>
+      <a href="#nosotros" onClick={onClose}>Nosotros</a>
+      <a href="#contacto" onClick={onClose}>Contacto</a>
+      <a href="#" className="btn btn-primary mob-cta" onClick={(e) => { e.preventDefault(); onClose(); onBook(); }}>
+        Agendar cita <Icon id="arrow" width="14" height="14" />
+      </a>
+    </div>
+  );
+}
+
+// ============ HERO ============
+function Hero({ onBook }) {
+  const ref = useReveal();
+  const videoRef = useRef(null);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => setVideoFailed(true));
+    }
+  }, []);
+
+  return (
+    <header className="hero" id="hero" ref={ref} data-screen-label="01 Hero">
+      <div className="hero-bg">
+        {!videoFailed ? (
+          <video
+            ref={videoRef}
+            src="assets/clinic-loop.mp4"
+            poster="assets/clinic-1.png"
+            autoPlay muted loop playsInline
+            onError={() => setVideoFailed(true)}
+          />
+        ) : (
+          <div className="hero-still" style={{ backgroundImage: "url(assets/clinic-1.png)" }} />
+        )}
+      </div>
+
+      <div className="container">
+        <div className="hero-inner reveal">
+          <div className="eyebrow">
+            <span className="dot"><Icon id="heart" width="12" height="12" /></span>
+            Odontopediatría con cariño · San Lucas Sacatepéquez
+          </div>
+          <h1>
+            Cuidamos tus dientes <span className="accent">como a tus niños</span>
+          </h1>
+          <p className="lede">
+            Clínica especializada en sonrisas pequeñas y grandes. Un equipo cariñoso, profesional
+            y un ambiente diseñado para que toda la familia se sienta en casa.
+          </p>
+          <div className="hero-ctas">
+            <a className="btn btn-whatsapp" href={WA_LINK} target="_blank" rel="noopener">
+              <Icon id="wa" width="20" height="20" />
+              Contacta por WhatsApp
+            </a>
+            <a className="btn btn-celeste" href="#agendar" onClick={(e) => { e.preventDefault(); onBook(); }}>
+              Agendar cita <Icon id="arrow" width="16" height="16" />
+            </a>
+          </div>
+
+          <div className="hero-meta">
+            <div className="mt">
+              <b>+1,200</b>
+              <span>sonrisas felices</span>
+            </div>
+            <div className="sep" />
+            <div className="mt">
+              <b>12 años</b>
+              <span>de experiencia</span>
+            </div>
+            <div className="sep" />
+            <div className="mt">
+              <b>24/7</b>
+              <span>emergencias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="hero-card" role="complementary">
+        <div className="av"><Icon id="smile" width="24" height="24" /></div>
+        <div>
+          <b>Dra. Lucía Méndez</b>
+          <span>Odontopediatra · 12 años cuidando sonrisas</span>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+// ============ SERVICES ============
+const SERVICES = [
+  {
+    icon: "tooth",
+    title: "Cuidado dental niños",
+    desc: "Primeras visitas, limpiezas, sellantes y fluorización en un ambiente diseñado para que tu peque sonría.",
+    tag: "Odontopediatría",
+    bg: "#E1F4FC",
+  },
+  {
+    icon: "smile",
+    title: "Cuidado dental adultos",
+    desc: "Chequeos preventivos, limpiezas profundas y restauraciones para mantener una boca saludable.",
+    tag: "Adultos",
+    bg: "#FFF2E8",
+  },
+  {
+    icon: "sparkle",
+    title: "Tratamientos especiales",
+    desc: "Brackets, blanqueamientos, endodoncias y cirugías menores con la última tecnología.",
+    tag: "Ortodoncia",
+    bg: "#F0EBFF",
+  },
+  {
+    icon: "shield",
+    title: "Emergencias dentales",
+    desc: "Disponibles 24/7. Si hay dolor o un accidente, llámanos y te atendemos lo antes posible.",
+    tag: "24/7",
+    bg: "#E8F8EE",
+  },
+];
+
+function Services() {
+  const ref = useReveal();
+  return (
+    <section id="servicios" ref={ref} data-screen-label="02 Servicios">
+      <div className="container">
+        <div className="sec-head reveal">
+          <span className="sec-tag">Servicios</span>
+          <h2>Todo lo que tu sonrisa necesita, en un solo lugar.</h2>
+          <p className="sec-sub">Atención integral para toda la familia, con un trato cariñoso que solo encuentras en Tu Dientito.</p>
+        </div>
+        <div className="services-grid reveal-stagger">
+          {SERVICES.map((s, i) => (
+            <article key={i} className="svc-card" style={{ "--svc-bg": s.bg }}>
+              <div className="svc-icon"><Icon id={s.icon} /></div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+              <span className="svc-tag">{s.tag}</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ============ WHY US ============
+const WHY = [
+  {
+    h: "Equipo especializado en niños",
+    p: "Odontólogos certificados en pediatría con años de experiencia haciendo que la primera visita sea inolvidable (en el buen sentido).",
+  },
+  {
+    h: "Metodología cariñosa y profesional",
+    p: "Explicamos cada paso con palabras simples, premios y mucha paciencia. Cero gritos, cero apuros — solo confianza.",
+  },
+  {
+    h: "Ambiente seguro y amigable",
+    p: "Espacios pensados para niños: colores suaves, juguetes, libros y protocolos de bioseguridad de hospital.",
+  },
+];
+
+function WhyUs() {
+  const ref = useReveal();
+  return (
+    <section id="nosotros" ref={ref} data-screen-label="03 Nosotros">
+      <div className="container">
+        <div className="why-wrap">
+          <div className="why-img-stack reveal">
+            <div className="wi wi-1"><img src="assets/clinic-1.png" alt="Sillón dental azul celeste con instrumental" /></div>
+            <div className="wi wi-2"><img src="assets/clinic-2.png" alt="Consultorio dental con plantas y luz natural" /></div>
+            <div className="wi-badge">
+              <b>4.9★</b>
+              <span>+200 reseñas</span>
+            </div>
+          </div>
+          <div className="why-content reveal">
+            <div className="sec-head" style={{ marginBottom: 8 }}>
+              <span className="sec-tag">Por qué nosotros</span>
+              <h2>Somos diferentes.</h2>
+              <p className="sec-sub">No es solo limpiar dientes. Es enseñar a cuidarlos, calmar el miedo y construir hábitos para toda la vida.</p>
+            </div>
+            <div className="why-list">
+              {WHY.map((w, i) => (
+                <div key={i} className="why-item">
+                  <div className="why-num">{String(i + 1).padStart(2, "0")}</div>
+                  <div>
+                    <h4>{w.h}</h4>
+                    <p>{w.p}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ============ CONTACT ============
+function ContactForm() {
+  const [data, setData] = useState({ name: "", phone: "", email: "", msg: "" });
+  const [errors, setErrors] = useState({});
+  const [sent, setSent] = useState(false);
+
+  const setField = (k, v) => {
+    setData((d) => ({ ...d, [k]: v }));
+    if (errors[k]) setErrors((e) => ({ ...e, [k]: null }));
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const next = {};
+    if (!data.name.trim()) next.name = "Por favor escribe tu nombre";
+    if (!data.phone.trim() || !/^[\d\s+\-()]{7,}$/.test(data.phone)) next.phone = "Teléfono inválido";
+    if (data.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) next.email = "Email inválido";
+    if (!data.msg.trim()) next.msg = "Cuéntanos cómo podemos ayudarte";
+    if (Object.keys(next).length) {
+      setErrors(next);
+      return;
+    }
+    setSent(true);
+  };
+
+  if (sent) {
+    return (
+      <div className="form-success">
+        <div className="check"><Icon id="check" width="32" height="32" /></div>
+        <h4>¡Mensaje enviado!</h4>
+        <p>Gracias {data.name.split(" ")[0]}, te contactaremos en las próximas horas hábiles. Si es urgente, escríbenos por WhatsApp.</p>
+        <a className="btn btn-whatsapp" href={WA_LINK} target="_blank" rel="noopener" style={{ marginTop: 6 }}>
+          <Icon id="wa" width="18" height="18" />
+          Abrir WhatsApp
+        </a>
+      </div>
+    );
+  }
+
+  return (
+    <form className="contact-form-card" onSubmit={onSubmit} noValidate>
+      <h3>Escríbenos</h3>
+      <p className="sub">Te respondemos en menos de 2 horas durante horario de clínica.</p>
+
+      <div className="form-row">
+        <div className={`field ${errors.name ? "error" : ""}`}>
+          <label htmlFor="f-name">Nombre completo</label>
+          <input id="f-name" value={data.name} onChange={(e) => setField("name", e.target.value)} placeholder="María González" />
+          {errors.name && <span className="err-msg">{errors.name}</span>}
+        </div>
+        <div className={`field ${errors.phone ? "error" : ""}`}>
+          <label htmlFor="f-phone">Teléfono</label>
+          <input id="f-phone" type="tel" value={data.phone} onChange={(e) => setField("phone", e.target.value)} placeholder="5476 4558" />
+          {errors.phone && <span className="err-msg">{errors.phone}</span>}
+        </div>
+      </div>
+
+      <div className={`field ${errors.email ? "error" : ""}`}>
+        <label htmlFor="f-email">Correo (opcional)</label>
+        <input id="f-email" type="email" value={data.email} onChange={(e) => setField("email", e.target.value)} placeholder="tu@correo.com" />
+        {errors.email && <span className="err-msg">{errors.email}</span>}
+      </div>
+
+      <div className={`field ${errors.msg ? "error" : ""}`}>
+        <label htmlFor="f-msg">¿Cómo podemos ayudarte?</label>
+        <textarea id="f-msg" value={data.msg} onChange={(e) => setField("msg", e.target.value)} placeholder="Quisiera agendar una limpieza para mi hijo de 6 años..." />
+        {errors.msg && <span className="err-msg">{errors.msg}</span>}
+      </div>
+
+      <button type="submit" className="btn btn-primary" style={{ alignSelf: "flex-start", marginTop: 4 }}>
+        Enviar mensaje <Icon id="arrow" width="16" height="16" />
+      </button>
+    </form>
+  );
+}
+
+function Contact() {
+  const ref = useReveal();
+  return (
+    <section id="contacto" ref={ref} data-screen-label="04 Contacto">
+      <div className="container">
+        <div className="sec-head reveal">
+          <span className="sec-tag">Contacto</span>
+          <h2>Estamos cerca, listos para sonreír contigo.</h2>
+        </div>
+        <div className="contact-grid">
+          <div className="contact-info-card reveal">
+            <h3>Visítanos</h3>
+            <p className="intro">Estamos en el corazón de San Lucas Sacatepéquez. Atendemos con cita previa y emergencias 24/7.</p>
+            <ul className="contact-list">
+              <li>
+                <span className="ci-icon"><Icon id="pin" /></span>
+                <div>
+                  <b>San Lucas Sacatepéquez, Guatemala</b>
+                  <span>Km 28.5 Carretera Interamericana</span>
+                </div>
+              </li>
+              <li>
+                <span className="ci-icon"><Icon id="phone" /></span>
+                <div>
+                  <b>+502 5476 4558</b>
+                  <span>Lun a Sab · 8:00 a 18:00</span>
+                </div>
+              </li>
+              <li>
+                <span className="ci-icon"><Icon id="mail" /></span>
+                <div>
+                  <b>dental@dientito.com</b>
+                  <span>Te respondemos en menos de 2h</span>
+                </div>
+              </li>
+              <li>
+                <span className="ci-icon"><Icon id="clock" /></span>
+                <div>
+                  <b>Emergencias 24/7</b>
+                  <span>Llámanos en cualquier momento</span>
+                </div>
+              </li>
+            </ul>
+            <a className="map-frame" href="https://maps.google.com/?q=San+Lucas+Sacatepequez+Guatemala" target="_blank" rel="noopener" aria-label="Abrir en Google Maps">
+              <div className="map-pin" />
+              <div className="map-label">Abrir en Google Maps →</div>
+            </a>
+          </div>
+          <div className="reveal">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ============ FOOTER ============
+function Footer() {
+  return (
+    <footer data-screen-label="05 Footer">
+      <div className="container">
+        <div className="foot-grid">
+          <div className="foot-brand">
+            <a href="#" className="brand">
+              <span className="brand-mark"><Icon id="tooth" width="22" height="22" /></span>
+              <span className="brand-name">
+                <b>Tu Dientito</b>
+                <span>Clínica Dental</span>
+              </span>
+            </a>
+            <p>Cuidamos tus dientes como a tus niños. Sonrisas felices, hábitos saludables y un equipo que siempre te recibe con cariño.</p>
+            <div className="foot-social">
+              <a href="#" aria-label="Instagram"><Icon id="ig" /></a>
+              <a href="#" aria-label="Facebook"><Icon id="fb" /></a>
+              <a href="#" aria-label="TikTok"><Icon id="tt" /></a>
+              <a href={WA_LINK} target="_blank" rel="noopener" aria-label="WhatsApp"><Icon id="wa" /></a>
+            </div>
+          </div>
+          <div className="foot-col">
+            <h5>Clínica</h5>
+            <ul>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div className="foot-col">
+            <h5>Servicios</h5>
+            <ul>
+              <li><a href="#">Odontopediatría</a></li>
+              <li><a href="#">Ortodoncia</a></li>
+              <li><a href="#">Limpiezas</a></li>
+              <li><a href="#">Emergencias</a></li>
+            </ul>
+          </div>
+          <div className="foot-col">
+            <h5>Horario</h5>
+            <ul>
+              <li>Lun – Vie · 8:00 – 18:00</li>
+              <li>Sábado · 9:00 – 14:00</li>
+              <li>Domingo · cerrado</li>
+              <li><a href={WA_LINK} target="_blank" rel="noopener">Emergencias 24/7 →</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="foot-bot">
+          <span>© 2026 Clínica Dental Tu Dientito · Todos los derechos reservados.</span>
+          <span>San Lucas Sacatepéquez, Guatemala 🇬🇹</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+// ============ BOOKING MODAL ============
+function BookingModal({ open, onClose }) {
+  const [step, setStep] = useState(1);
+  const [reason, setReason] = useState("");
+  const [date, setDate] = useState(null);
+  const [time, setTime] = useState(null);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      setStep(1); setReason(""); setDate(null); setTime(null); setName(""); setPhone(""); setDone(false);
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
+  if (!open) return null;
+
+  const today = new Date();
+  const dates = Array.from({ length: 8 }, (_, i) => {
+    const d = new Date(today); d.setDate(d.getDate() + i + 1);
+    return d;
+  });
+  const dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+  const monthNames = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
+  const times = ["09:00", "10:00", "11:00", "12:00", "14:00", "15:00", "16:00", "17:00"];
+  const disabledTimes = new Set(["12:00", "16:00"]);
+
+  const reasons = [
+    { v: "kids",     l: "Limpieza niños"   },
+    { v: "adult",    l: "Limpieza adultos" },
+    { v: "ortho",    l: "Brackets / Ortodoncia" },
+    { v: "emerg",    l: "Emergencia / dolor" },
+    { v: "other",    l: "Otro motivo"      },
+  ];
+
+  const finishWhatsapp = () => {
+    const dStr = `${dayNames[date.getDay()]} ${date.getDate()} ${monthNames[date.getMonth()]}`;
+    const text = `Hola Tu Dientito! 🦷 Quisiera agendar una cita.\n\n• Motivo: ${reasons.find(r=>r.v===reason)?.l}\n• Fecha: ${dStr} a las ${time}\n• Nombre: ${name}\n• Teléfono: ${phone}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, "_blank");
+  };
+
+  const submit = () => {
+    setDone(true);
+    setTimeout(() => finishWhatsapp(), 500);
+  };
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-labelledby="bk-title">
+        <button className="modal-close" onClick={onClose} aria-label="Cerrar"><Icon id="x" /></button>
+
+        {!done ? (
+          <>
+            <span className="sec-tag" style={{ marginBottom: 10, display: "inline-flex" }}>Paso {step} de 3</span>
+            <h3 id="bk-title">{step === 1 ? "¿Qué necesitas?" : step === 2 ? "Elige fecha y hora" : "Tus datos"}</h3>
+            <p className="sub">
+              {step === 1 && "Cuéntanos brevemente el motivo de tu cita."}
+              {step === 2 && "Estos son los espacios disponibles esta semana."}
+              {step === 3 && "Último paso. Te confirmamos por WhatsApp."}
+            </p>
+
+            {step === 1 && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 22 }}>
+                {reasons.map((r) => (
+                  <button
+                    key={r.v}
+                    type="button"
+                    onClick={() => setReason(r.v)}
+                    style={{
+                      padding: "16px 18px",
+                      background: reason === r.v ? "var(--celeste-200)" : "var(--paper)",
+                      borderRadius: 14,
+                      border: `1.5px solid ${reason === r.v ? "var(--celeste-400)" : "transparent"}`,
+                      textAlign: "left",
+                      fontWeight: 700,
+                      fontSize: 15,
+                      display: "flex", alignItems: "center", justifyContent: "space-between",
+                      transition: "all .2s",
+                    }}
+                  >
+                    {r.l}
+                    {reason === r.v && <Icon id="check" width="18" height="18" />}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {step === 2 && (
+              <>
+                <div className="date-grid">
+                  {dates.map((d, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      className={`date-pill ${date && d.getDate() === date.getDate() ? "active" : ""}`}
+                      onClick={() => setDate(d)}
+                    >
+                      <b>{d.getDate()}</b>
+                      <span>{dayNames[d.getDay()]} · {monthNames[d.getMonth()]}</span>
+                    </button>
+                  ))}
+                </div>
+                {date && (
+                  <>
+                    <label style={{ fontSize: 13, fontWeight: 700, color: "var(--ink-700)", display: "block", marginBottom: 10 }}>
+                      Horarios disponibles
+                    </label>
+                    <div className="time-grid">
+                      {times.map((t) => (
+                        <button
+                          key={t}
+                          type="button"
+                          className={`time-pill ${disabledTimes.has(t) ? "disabled" : ""} ${time === t ? "active" : ""}`}
+                          disabled={disabledTimes.has(t)}
+                          onClick={() => setTime(t)}
+                        >
+                          {t}
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </>
+            )}
+
+            {step === 3 && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 22 }}>
+                <div className="field">
+                  <label htmlFor="bk-name">Nombre</label>
+                  <input id="bk-name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre completo" />
+                </div>
+                <div className="field">
+                  <label htmlFor="bk-phone">Teléfono / WhatsApp</label>
+                  <input id="bk-phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="5476 4558" />
+                </div>
+                <div style={{ background: "var(--celeste-50)", borderRadius: 14, padding: "14px 16px", fontSize: 14, color: "var(--ink-700)" }}>
+                  <b style={{ display: "block", marginBottom: 4 }}>Resumen</b>
+                  · {reasons.find(r=>r.v===reason)?.l}<br />
+                  · {dayNames[date?.getDay() ?? 0]} {date?.getDate()} {monthNames[date?.getMonth() ?? 0]} a las {time}
+                </div>
+              </div>
+            )}
+
+            <div style={{ display: "flex", gap: 10, justifyContent: "space-between" }}>
+              {step > 1 ? (
+                <button className="btn btn-ghost" type="button" onClick={() => setStep(step - 1)}>Atrás</button>
+              ) : <span />}
+              {step < 3 ? (
+                <button
+                  className="btn btn-primary"
+                  type="button"
+                  disabled={(step === 1 && !reason) || (step === 2 && (!date || !time))}
+                  style={{ opacity: ((step === 1 && !reason) || (step === 2 && (!date || !time))) ? .4 : 1 }}
+                  onClick={() => setStep(step + 1)}
+                >
+                  Continuar <Icon id="arrow" width="16" height="16" />
+                </button>
+              ) : (
+                <button
+                  className="btn btn-whatsapp"
+                  type="button"
+                  disabled={!name.trim() || !phone.trim()}
+                  style={{ opacity: (!name.trim() || !phone.trim()) ? .4 : 1 }}
+                  onClick={submit}
+                >
+                  <Icon id="wa" width="18" height="18" />
+                  Confirmar por WhatsApp
+                </button>
+              )}
+            </div>
+          </>
+        ) : (
+          <div className="form-success" style={{ marginTop: 0 }}>
+            <div className="check"><Icon id="check" width="32" height="32" /></div>
+            <h4>¡Cita pre-reservada!</h4>
+            <p>Te abrimos WhatsApp para confirmar con el equipo. Si no se abre solo, <a href={WA_LINK} target="_blank" rel="noopener" style={{ color: "var(--whatsapp-dk)", fontWeight: 700 }}>haz clic aquí</a>.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ============ APP ============
+function App() {
+  const [bookOpen, setBookOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // ESC closes modals
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") { setBookOpen(false); setMenuOpen(false); } };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  return (
+    <>
+      <Nav onBook={() => setBookOpen(true)} onOpenMenu={() => setMenuOpen(true)} />
+      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} onBook={() => setBookOpen(true)} />
+      <Hero onBook={() => setBookOpen(true)} />
+      <Services />
+      <WhyUs />
+      <Contact />
+      <Footer />
+      <a className="fab-whatsapp" href={WA_LINK} target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <Icon id="wa" />
+      </a>
+      <BookingModal open={bookOpen} onClose={() => setBookOpen(false)} />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+</script>
+
+</body>
+</html>
